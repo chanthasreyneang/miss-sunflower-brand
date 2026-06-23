@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss Sunflower</title>
+
+    <link rel="icon" type="image/png" href="image/icon.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!---icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #FFF4CC;
+        }
+        .back-btn{
+            position: fixed;
+            bottom: 20px;
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+            text-decoration: none; 
+            background-color: #F4B41A;
+            color: #000;
+
+            font-size: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 9999;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn {
+            left: 20px;
+        }
+
+        .back-btn:hover{
+            background-color: #000;
+            color: #F4B41A;
+            transform: scale(1.1);
+        }
+
+        .back-btn:active {
+            transform: scale(0.95);
+        }
+
+        .hero-img{
+            width: 100%;
+            height: 90vh;
+            object-fit: cover;
+        }
+
+        .section-title{
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .product-card img{
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer a {
+            position: relative;
+            color: #333;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: -3px;
+            background-color: black;
+            transition: 0.3s;
+        }
+
+        footer a:hover::after {
+            width: 100%;
+        }
+        .navbar{
+            background-color: #FFF8DC;
+        }
+        .card{
+            height: 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-img-top{
+            height: 300px;
+            object-fit: cover;
+        }
+        .card-body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body .btn{
+            margin-top: auto;
+        }
+        .buy-btn{
+            width: fit-content;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-light fixed-top shadow-sm text-center">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#">
+            Miss <span style="color:#F4B41A;">Sunflower</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav text-center gap-2">
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="product.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-warning" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="py-5 mt-5" style="background-color:hwb(44 62% 4% / 0.74);">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Contact Us</h1>
+        <p class="lead">
+            We'd love to hear from you. Place your order or contact our team today.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="container py-5">
+
+    <div class="row g-4">
+
+        <!-- Order Form -->
+        <div class="col-lg-7">
+
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body p-4">
+
+                    <h3 class="mb-4 fw-bold">Place Your Order</h3>
+
+                    <form>
+
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Delivery Address</label>
+                            <textarea class="form-control" rows="3" placeholder="Enter your full address"></textarea>
+                        </div>
+
+                        <!-- Product Selection -->
+                        <div class="mb-4">
+
+                            <label class="form-label fw-bold">Select Product(s)</label>
+
+                            <div class="table-responsive">
+
+                                <table class="table table-bordered">
+
+                                    <thead class="table-warning">
+                                        <tr>
+                                            <th>Select</th>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Body Lotion</td>
+                                            <td>$18.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Armpit Cream</td>
+                                            <td>$4.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Sun Serum</td>
+                                            <td>$7.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>BB Cream</td>
+                                            <td>$7.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>SAUNA Supper Detox Mask</td>
+                                            <td>$9.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Ice Spa</td>
+                                            <td>$18.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Bambooo Charcoals Spa</td>
+                                            <td>$2.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Cica Sheetmask</td>
+                                            <td>$7.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Toning Essense Mask</td>
+                                            <td>$7.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Night Cream</td>
+                                            <td>$7.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>DNA Salmon Serum</td>
+                                            <td>$10.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Collagen</td>
+                                            <td>$18.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Cushion</td>
+                                            <td>$18.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Double Cleanser</td>
+                                            <td>$7.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Super Glow Serum</td>
+                                            <td>$6.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Night Cream Skin</td>
+                                            <td>$4.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Anti Stretch Mark Cream</td>
+                                            <td>$15.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>Shampoo & Hair Conditioner</td>
+                                            <td>$21.99</td>
+                                            <td>
+                                                <input type="number" class="form-control" value="1" min="1">
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="mb-4">
+                            <label class="form-label">Payment Method</label>
+
+                            <select class="form-select ">
+                                <option>ABA Bank</option>
+                                <option>ACLEDA Bank</option>
+                                <option>Wing Money</option>
+                                <option>Cash on Delivery</option>
+                            </select>
+                        </div>
+
+                        <!-- QR Code -->
+                        <div class="mb-4">
+
+                            <h5 class="mb-3">Scan To Pay</h5>
+
+                            <div class="text-center">
+                                <img src="image/qr.png" width="300px" class="img-fluid rounded shadow" alt="QR Code">
+                            </div>
+
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mb-4">
+                            <label class="form-label">Improvment message</label>
+
+                            <textarea class="form-control"
+                                      rows="4"
+                                      placeholder="Enter your message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning px-4">
+                            Place Order
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+
+            <div class="card shadow-sm border-0 rounded-4" style="height: 800px;">
+                <div class="card-body p-4">
+
+                    <h3 class="mb-4">Contact Information</h3>
+
+                    <p>
+                        <i class="bi bi-telephone-fill text-warning me-2"></i>
+                        012 345 678
+                    </p>
+
+                    <p>
+                        <i class="bi bi-envelope-fill text-warning me-2"></i>
+                        info@misssunflower.com
+                    </p>
+
+                    <p>
+                        <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+                        Phnom Penh, Cambodia
+                    </p>
+
+                    <p>
+                        <i class="bi bi-clock-fill text-warning me-2"></i>
+                        Mon - Sat | 8:00 AM - 5:00 PM
+                    </p>
+                    <hr>
+                    <div>
+                        <h2>Our Location</h2>
+                    </div>
+                    <div class="card border-0 rounded-4 overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.765296562772!2d104.88816677481726!3d11.568675988632382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109519fe4077d69%3A0x20138e822e434660!2sRoyal%20University%20of%20Phnom%20Penh!5e0!3m2!1sen!2skh!4v1782219321836!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            width="100%"
+                            height="250"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="pt-5 pb-3" style="background-color:#E2C44C;">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Brand Info -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Miss Sunflower </h5>
+                <p>
+                    Natural skincare products made with love and care.
+                    We help your skin glow naturally and safely.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+                    <li><a href="product.html" class="text-dark text-decoration-none">Products</a></li>
+                    <li><a href="about.html" class="text-dark text-decoration-none">About</a></li>
+                    <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!--Contact Info -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Contact Us</h5>
+
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fa-solid fa-phone me-2"></i>
+                    <span>012 345 678</span>
+                </div>
+
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fa-solid fa-envelope me-2"></i>
+                    <span>info@misssunflower.com</span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-location-dot me-2"></i>
+                    <span>Phnom Penh, Cambodia</span>
+                </div>
+                <!-- Social -->
+                <div class="mt-3">
+                    <a href="#" class="text-decoration me-3">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-decoration me-3">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-decoration">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+            
+        <!-- Bottom Line -->
+        <hr>
+
+        <div class="text-center">
+            <p class="mb-0">© 2026 Miss Sunflower | All rights reserved</p>
+            <small>Developed by Chantha Sreyneang</small>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Floating Back Button -->
+<a href="product.html" class="back-btn">
+    <i class="bi bi-arrow-left"></i>
+</a>
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>

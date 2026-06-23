@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss Sunflower</title>
+
+    <link rel="icon" type="image/png" href="image/icon.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!---icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #FFF4CC;
+        }
+        
+        .next-btn {
+            position: fixed;
+            bottom: 20px;
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+            text-decoration: none; 
+
+            background-color: #F4B41A;
+            color: #000;
+
+            font-size: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 9999;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+
+        .next-btn {
+            right: 20px;
+        }
+
+        .next-btn:hover {
+            background-color: #000;
+            color: #F4B41A;
+            transform: scale(1.1);
+        }
+
+        .back-btn:active {
+            transform: scale(0.95);
+        }
+        #home img {
+            height: 90vh;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media (max-width: 768px) {
+            #home img {
+                height: 40vh;              
+                object-fit: cover;         
+                object-position: 92% center; 
+            }
+        }
+        .product-card img{
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer a {
+            position: relative;
+            color: #333;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: -3px;
+            background-color: black;
+            transition: 0.3s;
+        }
+
+        footer a:hover::after {
+            width: 100%;
+        }
+        .navbar{
+            background-color: #FFF8DC;
+        }
+        .card{
+            height: 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-img-top{
+            height: 285px;
+            object-fit: cover;
+        }
+        .card-body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body .btn{
+            margin-top: auto;
+        }
+        .buy-btn{
+            width: fit-content;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-light fixed-top shadow-sm text-center">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#">
+            Miss <span style="color:#F4B41A;">Sunflower</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav text-center gap-2">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-warning" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="product.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- HERO SECTION -->
+<section id="home" class="mt-5">
+
+    <div class="position-relative">
+
+        <img src="image/hbanner.png"
+             class="img-fluid w-100"
+             alt="Miss Sunflower Banner">
+
+        <!-- Desktop Text -->
+        <div class="position-absolute top-50 start-0 translate-middle-y ms-5 d-none d-md-block">
+
+            <h1 class="display-3 fw-normal mb-0">
+                Welcome to
+            </h1>
+
+            <h1 class="display-3 fw-bold">
+                Miss Sunflower
+            </h1>
+
+            <p class="lead mt-3">
+                Natural skincare for healthy and glowing skin
+            </p>
+
+            <a href="product.html" class="btn btn-warning me-2">
+                Shop Now
+            </a>
+
+            <a href="product.html" class="btn btn-outline-dark">
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Mobile Text -->
+    <div class="container text-center py-4 d-block d-md-none">
+
+        <h1 class="fw-normal mb-0">
+            Welcome to Miss Sunflower
+        </h1>
+        <p class="mt-3">
+            Natural skincare for healthy and glowing skin
+        </p>
+
+        <a href="product.html" class="btn btn-warning me-2">
+            Shop Now
+        </a>
+
+        <a href="product.html" class="btn btn-outline-dark">
+            View Product
+        </a>
+
+    </div>
+
+</section>
+
+<section class="text-center py-5 " style="background-color:hwb(44 62% 4% / 0.74);">
+    <div class="container">
+
+        <h3 class="fw-bold mb-3">
+            Miss Sunflower is a ritual of beauty inspired by nature.
+        </h3>
+
+        <p class="text-muted mb-4">
+            Discover gentle skincare designed to bring out your natural glow, every single day.
+        </p>
+
+        <a href="product.html" class="btn btn-warning ">
+            Start Your Journey
+        </a>
+
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="container mt-5">
+    <h2 class="text-center section-title display-5 fw-bold">Our Best Selling</h2>
+
+    <div class="row justify-content-center g-4">
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+            <div class="card rounded-4 shadow-sm" style="width: 18rem;">
+                <img class="card-img-top" src="image/bodylotion.png" alt="bodylotion">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Body lotion</h5>
+                    <p class="card-text">The best body lotion that can help your skin white</p>
+                    <h4 class="text-warning fw-bold mb-3">$18.99</h4>
+                    <a href="product.html" class="btn btn-warning btn-sm buy-btn">Buy now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+            <div class="card rounded-4 shadow-sm" style="width: 18rem;">
+                <img class="card-img-top" src="image/bbcream.png" alt="bodylotion">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">BB Cream</h5>
+                    <p class="card-text">Best BB cream to make your face glow and smooth at the same time.</p>
+                    <h4 class="text-warning fw-bold mb-3">$7.99</h4>
+                    <a href="product.html" class="btn btn-warning btn-sm buy-btn">Buy now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+            <div class="card rounded-4 shadow-sm" style="width: 18rem;">
+                <img class="card-img-top" src="image/armpit.png" alt="bodylotion">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Armpit cream</h5>
+                    <p class="card-text">Help your armpit white and smooth</p>
+                    <br>
+                    <h4 class="text-warning fw-bold mb-3">$4.99</h4>
+                    <a href="product.html" class="btn btn-warning btn-sm buy-btn">Buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+            <div class="card rounded-4 shadow-sm" style="width: 18rem;">
+                <img class="card-img-top" src="image/sunserum.png" alt="bodylotion">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Sun Serum</h5>
+                    <p class="card-text">Protect your skin from sun burn.</p><br>
+                    <h4 class="text-warning fw-bold mb-3">$7.99</h4>
+                    <a href="product.html" class="btn btn-warning btn-sm buy-btn">Buy now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container mt-5">
+    <h2 class="text-center section-title display-5 fw-bold">About Miss Sunflower</h2>
+    <div class="card shadow-lg" style="background-color:#FFF8DC ;">
+        <div class="card-body p-4" >
+
+            <div class="row align-items-center">
+
+                <div class="col-12 col-md-6 order-2 order-md-1 mt-3 mt-md-0">
+                    <p class="fs-4">
+                        Miss Sunflower is a Cambodian skincare brand founded by CEO Lai Souyiek.
+                        The brand offers quality beauty and personal care products
+
+                        <span id="dots">...</span>
+
+                        <span id="moreText" style="display: none;">
+                            Miss Sunflower focuses on using natural ingredients that are safe and
+                            effective for all skin types. The brand is committed to helping customers
+                            achieve healthy, radiant skin while maintaining affordability.
+
+                            Over the years, Miss Sunflower has gained the trust of many customers
+                            across Cambodia. With a passion for beauty and self-care, the company
+                            continues to innovate and expand its product line to meet modern skincare needs.
+
+                            Our mission is to empower confidence through high-quality skincare products
+                            that deliver real results.
+                        </span>
+                    </p>
+
+                    <button onclick="toggleText()" id="readBtn" class="btn btn-dark">
+                        Read More
+                    </button>
+
+                </div>
+
+                    <div class="col-12 col-md-6 order-1 order-md-2 text-center">
+                        <img src="image/jy.png" class="img-fluid rounded" alt="Je Yeak">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="container mt-5">
+    <h2 class="text-center display-5 fw-bold mb-5">Why Choose Us?</h2>
+
+    <div class="row text-center g-4">
+
+        <div class="col-12 col-md-4">
+            <div class="p-4 rounded-4 shadow-sm h-100" style="background-color:#FFF8DC;">
+                
+                <i class="bi bi-flower1 fs-1 text-warning mb-3"></i>
+
+                <h5 class="fw-bold">Natural Ingredients</h5>
+                <p>Safe and healthy for all skin types.</p>
+
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="p-4 rounded-4 shadow-sm h-100" style="background-color:#FFF8DC;">
+                
+                <i class="bi bi-cash-coin fs-1 text-warning mb-3"></i>
+
+                <h5 class="fw-bold">Affordable Price</h5>
+                <p>High quality but budget friendly.</p>
+
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="p-4 rounded-4 shadow-sm h-100" style="background-color:#FFF8DC;">
+                
+                <i class="bi bi-patch-check-fill fs-1 text-warning mb-3"></i>
+
+                <h5 class="fw-bold">Trusted Brand</h5>
+                <p>Used by many happy customers.</p>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Call to Action-->
+<section class="text-center mt-3 py-5" style="background-color:hwb(44 62% 4% / 0.74);">
+    <div class="container">
+
+        <h1 class="fw-bold mb-4">
+            Ready to transform your skincare routine?
+        </h1>
+
+        <p class="fs-5 mb-4 text-muted">
+            Discover natural beauty products made for healthy and glowing skin 🌻
+        </p>
+
+        <a href="product.html" class="btn btn-warning btn-lg px-4">
+            Shop Now
+        </a>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="pt-5 pb-3" style="background-color:#E2C44C;">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Brand Info -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Miss Sunflower </h5>
+                <p>
+                    Natural skincare products made with love and care.
+                    We help your skin glow naturally and safely.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+                    <li><a href="product.html" class="text-dark text-decoration-none">Products</a></li>
+                    <li><a href="about.html" class="text-dark text-decoration-none">About</a></li>
+                    <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!--Contact Info -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Contact Us</h5>
+
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fa-solid fa-phone me-2"></i>
+                    <span>012 345 678</span>
+                </div>
+
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fa-solid fa-envelope me-2"></i>
+                    <span>info@misssunflower.com</span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-location-dot me-2"></i>
+                    <span>Phnom Penh, Cambodia</span>
+                </div>
+                <!-- Social -->
+                <div class="mt-3">
+                    <a href="#" class="text-decoration me-3">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-decoration me-3">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-decoration">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+            
+        <!-- Bottom Line -->
+        <hr>
+
+        <div class="text-center">
+            <p class="mb-0">© 2026 Miss Sunflower | All rights reserved</p>
+            <small>Developed by Chantha Sreyneang</small>
+        </div>
+
+    </div>
+</footer>
+
+<!--Floating button-->
+<div>
+    <a href="product.html" class="next-btn">
+        <i class="bi bi-arrow-right"></i>
+    </a>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--JS for Readmore-->
+<script>
+function toggleText() {
+    let dots = document.getElementById("dots");
+    let moreText = document.getElementById("moreText");
+    let btn = document.getElementById("readBtn");
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        dots.style.display = "none";
+        btn.innerHTML = "Read Less";
+    } else {
+        moreText.style.display = "none";
+        dots.style.display = "inline";
+        btn.innerHTML = "Read More";
+    }
+}
+</script>
+</body>
+</html>

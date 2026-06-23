@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss Sunflower</title>
+
+    <link rel="icon" type="image/png" href="image/icon.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!---icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #FFF4CC;
+        }
+        .back-btn,
+        .next-btn {
+            position: fixed;
+            bottom: 20px;
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+            text-decoration: none; 
+
+            background-color: #F4B41A;
+            color: #000;
+
+            font-size: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 9999;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn {
+            left: 20px;
+        }
+        .next-btn {
+            right: 20px;
+        }
+
+        .back-btn:hover,
+        .next-btn:hover {
+            background-color: #000;
+            color: #F4B41A;
+            transform: scale(1.1);
+        }
+
+        .back-btn:active {
+            transform: scale(0.95);
+        }
+        .hero-img{
+            width: 100%;
+            height: 90vh;
+            object-fit: cover;
+        }
+
+        .section-title{
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .product-card img{
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer a {
+            position: relative;
+            color: #333;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: -3px;
+            background-color: black;
+            transition: 0.3s;
+        }
+
+        footer a:hover::after {
+            width: 100%;
+        }
+        .navbar{
+            background-color: #FFF8DC;
+        }
+        .card{
+            height: 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-img-top{
+            height: 300px;
+            object-fit: cover;
+        }
+        .card-body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body .btn{
+            margin-top: auto;
+        }
+        .buy-btn{
+            width: fit-content;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-light fixed-top shadow-sm text-center">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#">
+            Miss <span style="color:#F4B41A;">Sunflower</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav text-center gap-2">
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="product.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-warning" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="py-5 mt-5 text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">About Miss Sunflower</h1>
+        <p class="lead">
+            Discover the story behind our commitment to healthy and glowing skin.
+        </p>
+    </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="container mb-5">
+    <div class="card border-radius-5 shadow-sm rounded-4" style="background-color: #FFF8DC;">
+        <div class="row g-0 align-items-center">
+
+            <div class="col-12 col-md-6 text-center">
+                <img src="image/ceo2.png" class="img-fluid rounded-5 p-4" alt="CEO Miss Sunflower">
+            </div>
+
+            <div class="col-md-6">
+                <div class="card-body p-4">
+                    <h1 class="fw-bold mb-3">Our Story</h1>
+
+                    <p>
+                        Miss Sunflower is a Cambodian skincare brand founded by
+                        CEO Lai Souyiek. The company was created with a passion
+                        for beauty, self-care, and confidence.
+                    </p>
+
+                    <p>
+                        We believe everyone deserves healthy and radiant skin.
+                        Our products are carefully selected and designed to help
+                        customers achieve their skincare goals safely and effectively.
+                    </p>
+
+                    <p>
+                        Today, Miss Sunflower continues to grow and gain the trust
+                        of customers across Cambodia through quality products and
+                        excellent customer service.
+                    </p>
+                    <p>
+                        Miss Sunflower is dedicated to empowering individuals through effective skincare solutions.
+                        By combining quality ingredients, innovation, and customer care, we strive to help people
+                        feel confident in their natural beauty every day. As we continue to grow, our goal is to
+                        expand our product range and become one of Cambodia's leading skincare brands.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="container mb-5">
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4 " style="background-color: #FFF8DC;">
+                <div class="card-body text-center p-4">
+                    <i class="bi bi-bullseye fs-1 text-warning"></i>
+                    <h3 class="fw-bold mt-3">Our Mission</h3>
+                    <p>
+                        To provide safe, affordable, and effective skincare
+                        products that help customers feel confident and beautiful.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4" style="background-color: #FFF8DC;">
+                <div class="card-body text-center p-4">
+                    <i class="bi bi-eye-fill fs-1 text-warning"></i>
+                    <h3 class="fw-bold mt-3">Our Vision</h3>
+                    <p>
+                        To become one of Cambodia's most trusted skincare brands
+                        and inspire confidence through natural beauty.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="container mb-5">
+    <h1 class="text-center fw-bold mb-4">Our Core Values</h1>
+
+    <div class="row g-4 text-center">
+
+        <div class="col-md-4">
+            <div class="p-4 shadow-sm rounded-4 h-100" style="background-color: #FFF8DC;">
+                <i class="bi bi-patch-check-fill fs-1 text-warning"></i>
+                <h5 class="fw-bold mt-3">Quality</h5>
+                <p>Providing products that meet high standards.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4 shadow-sm rounded-4 h-100" style="background-color: #FFF8DC;">
+                <i class="bi bi-heart-fill fs-1 text-warning"></i>
+                <h5 class="fw-bold mt-3">Customer Care</h5>
+                <p>Putting customer satisfaction at the center of everything.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4 shadow-sm rounded-4 h-100" style="background-color: #FFF8DC;">
+                <i class="bi bi-flower1 fs-1 text-warning"></i>
+                <h5 class="fw-bold mt-3">Natural Beauty</h5>
+                <p>Promoting healthy and confident beauty naturally.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="container mb-5">
+    <h1 class="text-center fw-bold mb-4">Why Choose Miss Sunflower?</h1>
+
+    <div class="row text-center g-4">
+
+        <div class="col-md-3">
+            <div class="p-4 rounded-4 shadow-sm" style="background-color: #FFF8DC;">
+                <h3 class="fw-bold text-warning">5000+</h3>
+                <p>Happy Customers</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="p-4 rounded-4 shadow-sm " style="background-color: #FFF8DC;">
+                <h3 class="fw-bold text-warning">20+</h3>
+                <p>Beauty Products</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="p-4 rounded-4 shadow-sm " style="background-color: #FFF8DC;">
+                <h3 class="fw-bold text-warning">5+</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="p-4 rounded-4 shadow-sm" style="background-color: #FFF8DC;">
+                <h3 class="fw-bold text-warning">100%</h3>
+                <p>Customer Satisfaction</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="text-center py-5 mb-5"
+         style="background-color:hwb(44 62% 4% / 0.74);">
+    <div class="container">
+
+        <h1 class="fw-bold mb-3">
+            Ready to discover your natural beauty?
+        </h1>
+
+        <p class="mb-4">
+            Explore our skincare collection and find the perfect products for you.
+        </p>
+
+        <a href="product.html" class="btn btn-warning btn-lg">
+            Explore Products
+        </a>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="pt-5 pb-3" style="background-color:#E2C44C;">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Brand Info -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Miss Sunflower </h5>
+                <p>
+                    Natural skincare products made with love and care.
+                    We help your skin glow naturally and safely.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+                    <li><a href="product.html" class="text-dark text-decoration-none">Products</a></li>
+                    <li><a href="about.html" class="text-dark text-decoration-none">About</a></li>
+                    <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!--Contact Info -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Contact Us</h5>
+
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fa-solid fa-phone me-2"></i>
+                    <span>012 345 678</span>
+                </div>
+
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fa-solid fa-envelope me-2"></i>
+                    <span>info@misssunflower.com</span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-location-dot me-2"></i>
+                    <span>Phnom Penh, Cambodia</span>
+                </div>
+                <!-- Social -->
+                <div class="mt-3">
+                    <a href="#" class="text-decoration me-3">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-decoration me-3">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-decoration">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+            
+        <!-- Bottom Line -->
+        <hr>
+
+        <div class="text-center">
+            <p class="mb-0">© 2026 Miss Sunflower | All rights reserved</p>
+            <small>Developed by Chantha Sreyneang</small>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Floating Back Button -->
+<a href="product.html" class="back-btn">
+    <i class="bi bi-arrow-left"></i>
+</a>
+
+<a href="contact.html" class="next-btn">
+    <i class="bi bi-arrow-right"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
