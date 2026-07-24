@@ -5,115 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miss Sunflower</title>
 
-    <link rel="icon" type="image/png" href="image/icon.png">
-
+    <link rel="icon" type="image/png" href="../image/icon.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap icon-->
+    <!-- Bootstrap icon-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-    <!--Icon-->
+    <!---icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-color: #FFF4CC;
-        }
-        .back-btn,
-        .next-btn {
-            position: fixed;
-            bottom: 20px;
-
-            width: 45px;
-            height: 45px;
-
-            border-radius: 50%;
-            text-decoration: none; 
-
-            background-color: #F4B41A;
-            color: #000;
-
-            font-size: 18px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            z-index: 9999;
-
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-        .back-btn {
-            left: 20px;
-        }
-
-        .next-btn {
-            right: 20px;
-        }
-
-        .back-btn:hover,
-        .next-btn:hover {
-            background-color: #000;
-            color: #F4B41A;
-            transform: scale(1.1);
-        }
-
-        .back-btn:active {
-            transform: scale(0.95);
-        }
-
-        .navbar{
-            background-color: #FFF8DC;
-        }
-
-        .section-title{
-            font-weight: bold;
-        }
-
-        .card{
-            height:100%;
-        }
-
-        .card-img-top{
-            height:500px;
-            object-fit:cover;
-        }
-
-        .card-body{
-            display:flex;
-            flex-direction:column;
-        }
-
-        .card-body .btn{
-            margin-top:auto;
-            width:fit-content;
-        }
-
-        footer a {
-            position: relative;
-            color: #333;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        footer a::after {
-            content: "";
-            position: absolute;
-            width: 0%;
-            height: 2px;
-            left: 0;
-            bottom: -3px;
-            background-color: black;
-            transition: 0.3s;
-        }
-
-        footer a:hover::after {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/product.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -132,16 +34,25 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav text-center gap-2">
                 <li class="nav-item">
-                    <a class="nav-link fw-medium" href="index.html">Home</a>
+                    <a class="nav-link fw-medium" href="../html/index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold text-warning" href="product.html">Products</a>
+                    <a class="nav-link fw-bold text-warning" href="../html/product.html">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-medium" href="about.html">About</a>
+                    <a class="nav-link fw-medium" href="../html/about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-medium" href="contact.html">Contact</a>
+                    <a class="nav-link fw-medium" href="../html/contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="../html/payment.html">Payment</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-normal" href="../html/sign-in.html">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -152,7 +63,7 @@
 <!-- PAGE HEADER -->
 <section class="py-5">
     <div class="position-relative">
-        <img src="image/ceo.png" class="img-fluid w-100" alt="Miss Sunflower Banner">
+        <img src="../image/ceo.png" class="img-fluid w-100" alt="Miss Sunflower Banner">
     <div class="container text-center">
 
         <h1 class="display-4 fw-bold mt-5">
@@ -173,85 +84,32 @@
 
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/bodylotion.png"
-                    class="card-img-top"
-                    alt="Body Lotion">
-
-                <div class="card-body">
-                    <h5 class="fw-bold">Body Lotion</h5>
-                    <p>
-                        Moisturizes and nourishes the skin for a smooth appearance.
-                    </p>
-                    <h4 class="text-warning fw-bold mb-3">$18.99</h4>
-                    <a href="contact.html?product=bodyLotion" class="btn btn-warning">
-                        Buy Now
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow-sm rounded-4">
-                <img src="image/detox.png"
+                <img src="../image/bodylotion.png"
                     class="card-img-top" alt="spa">
 
                 <div class="card-body">
-                    <h5 class="fw-bold">SAUNA Supper Detox Mask</h5>
+                    <h5 class="fw-bold">Body lotion</h5>
                     <p>
-                        Help your skin white in short time.
-                    </p>
-                    <br>
-                    <h4 class="text-warning fw-bold mb-3">$9.99</h4>
-                    <a href="#" class="btn btn-warning">
-                        Buy Now
-                    </a>
-                </div>
-            </div>
-
-         </div>
-
-         <div class="col-md-4">
-            <div class="card shadow-sm rounded-4">
-                <img src="image/spa2.png"
-                    class="card-img-top" alt="spa">
-
-                <div class="card-body">
-                    <h5 class="fw-bold">Ice Spa</h5>
-                    <p>
-                        Help your skin white in short time.
+                        Natural Whitening Body Lotion
                     </p>
                     <br>
                     <h4 class="text-warning fw-bold mb-3">$18.99</h4>
-                    <a href="#" class="btn btn-warning">
-                        Buy Now
-                    </a>
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html?product=body&buy=true" class="btn btn-warning">
+                            Buy Now
+                        </a>
+                        <button class="btn btn-dark add-cart" data-product="body">
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
 
          </div>
-
-        <div class="col-md-4">
-            <div class="card shadow-sm rounded-4">
-                <img src="image/spa1.png"
-                    class="card-img-top" alt="Spa">
-
-                <div class="card-body">
-                    <h5 class="fw-bold">Bamboo Charcoals Spa</h5>
-                    <p>
-                        Help your skin white in short time.
-                    </p>
-                    <h4 class="text-warning fw-bold mb-3">$2.99</h4>
-                    <a href="#" class="btn btn-warning">
-                        Buy Now
-                    </a>
-                </div>
-            </div>
-
-         </div>
-
+        
          <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/bbcream.png"
+                <img src="../image/bbcream.png"
                     class="card-img-top"
                     alt="BB Cream">
 
@@ -260,17 +118,26 @@
                     <p>
                         Provides natural coverage and a glowing finish.
                     </p>
+                    <br>
                     <h4 class="text-warning fw-bold mb-3">$7.99</h4>
-                    <a href="#" class="btn btn-warning">
-                        Buy Now
-                    </a>
+                    <div class="d-flex gap-2">
+                        <div class="d-flex gap-2">
+                            <a href="../html/payment.html?product=bb&buy=true" class="btn btn-warning">
+                                Buy Now
+                            </a>
+
+                            <button class="btn btn-dark add-cart" data-product="bb">
+                                <i class="bi bi-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/armpit.png"
+                <img src="../image/armpit.png"
                     class="card-img-top"
                     alt="Armpit Cream">
 
@@ -279,17 +146,26 @@
                     <p>
                         Helps brighten and smooth underarm skin.
                     </p>
+                    <br>
                     <h4 class="text-warning fw-bold mb-3">$4.99</h4>
-                    <a href="#" class="btn btn-warning">
-                        Buy Now
-                    </a>
+                    <div class="d-flex gap-2">
+                        <div class="d-flex gap-2">
+                            <a href="../html/payment.html?product=armpit&buy=true" class="btn btn-warning">
+                                Buy Now
+                            </a>
+
+                            <button class="btn btn-dark add-cart" data-product="armpit">
+                                <i class="bi bi-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/sunserum.png"
+                <img src="../image/sunserum.png"
                     class="card-img-top"
                     alt="Sun Serum">
 
@@ -299,16 +175,98 @@
                         Protects skin from harmful UV rays while keeping it hydrated.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$7.99</h4>
-                    <a href="#" class="btn btn-warning">
-                        Buy Now
-                    </a>
+                    <div class="d-flex gap-2">
+                        <div class="d-flex gap-2">
+                            <a href="../html/payment.html?product=sun&buy=true" class="btn btn-warning">
+                                Buy Now
+                            </a>
+
+                            <button class="btn btn-dark add-cart" data-product="sun">
+                                <i class="bi bi-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                    <img src="image/cica.png" alt="sheetmask"
+                <img src="../image/detox.png"
+                    class="card-img-top" alt="spa">
+
+                <div class="card-body">
+                    <h5 class="fw-bold">SAUNA Supper Detox Mask</h5>
+                    <p>
+                        Help your skin white in short time.
+                    </p>
+                    <br>
+                    <h4 class="text-warning fw-bold mb-3">$9.99</h4>
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html?product=bb&buy=true" class="btn btn-warning">
+                            Buy Now
+                        </a>
+                        <a href="../html/payment.html?product=bb" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+         <div class="col-md-4">
+            <div class="card shadow-sm rounded-4">
+                <img src="../image/spa2.png"
+                    class="card-img-top" alt="spa">
+
+                <div class="card-body">
+                    <h5 class="fw-bold">Ice Spa</h5>
+                    <p>
+                        Help your skin white in short time.
+                    </p>
+                    <br>
+                    <h4 class="text-warning fw-bold mb-3">$18.99</h4>
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
+                        Buy Now
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm rounded-4">
+                <img src="../image/spa1.png"
+                    class="card-img-top" alt="Spa">
+
+                <div class="card-body">
+                    <h5 class="fw-bold">Bamboo Charcoals Spa</h5>
+                    <p>
+                        Help your skin white in short time.
+                    </p><br>
+                    <h4 class="text-warning fw-bold mb-3">$2.99</h4>
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
+                        Buy Now
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm rounded-4">
+                    <img src="../image/cica.png" alt="sheetmask"
                     class="card-img-top">
                     <div class="card-body">
                         <h5 class="fw-bold">Cica Sheetmask</h5>
@@ -317,16 +275,21 @@
                         </p>
                         <br>
                         <h4 class="text-warning fw-bold mb-3">$7.99</h4>
-                        <a href="#" class="btn btn-warning">
+                        <div class="d-flex gap-2">
+                            <a href="../html/payment.html" class="btn btn-warning">
                             Buy Now
-                        </a>
+                            </a>
+                            <a href="../html/payment.html" class="btn btn-dark">
+                                <i class="bi bi-cart-plus"></i>
+                            </a>
+                        </div>
                     </div>
             </div>
         </div>
         
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/toning.png"
+                <img src="../image/toning.png"
                     class="card-img-top"
                     alt="Sheetmask">
 
@@ -337,16 +300,21 @@
                     </p>
                     <br>
                     <h4 class="text-warning fw-bold mb-3">$7.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/nightcream.png"
+                <img src="../image/nightcream.png"
                     class="card-img-top"
                     alt="Night Cream">
 
@@ -356,16 +324,21 @@
                         Repairs and nourishes skin while you sleep.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$7.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/dna.png"
+                <img src="../image/dna.png"
                     class="card-img-top"
                     alt="DNA Serum">
 
@@ -375,16 +348,21 @@
                         Helps improve skin texture and maintain healthy skin.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$10.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
          <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/collagen.png"
+                <img src="../image/collagen.png"
                     class="card-img-top" alt="collagen">
 
                 <div class="card-body">
@@ -393,9 +371,14 @@
                         Help your skin brightening and healthy.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$18.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -403,7 +386,7 @@
 
          <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/cushion.png"
+                <img src="../image/cushion.png"
                     class="card-img-top" alt="chusion">
 
                 <div class="card-body">
@@ -412,9 +395,14 @@
                         Make your skin smooth, glow and glass skin.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$18.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -422,7 +410,7 @@
 
          <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/doublecleanser.png"
+                <img src="../image/doublecleanser.png"
                     class="card-img-top" alt="doublecleanser">
 
                 <div class="card-body">
@@ -431,9 +419,14 @@
                         Deep cleaning to your skin.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$7.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -441,7 +434,7 @@
 
          <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/fserum.png"
+                <img src="../image/fserum.png"
                     class="card-img-top" alt="face serum">
 
                 <div class="card-body">
@@ -450,9 +443,14 @@
                         Help your skin brightening and healthy.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$6.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -460,7 +458,7 @@
          
          <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/nc.png"
+                <img src="../image/nc.png"
                     class="card-img-top" alt="nightcream">
 
                 <div class="card-body">
@@ -469,9 +467,14 @@
                         Help your skin brightening and healthy.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$4.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -479,7 +482,7 @@
 
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/markcream.png"
+                <img src="../image/markcream.png"
                     class="card-img-top" alt="markcream">
 
                 <div class="card-body">
@@ -488,9 +491,14 @@
                         Help your skin brightening and Glowing.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$15.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -498,7 +506,7 @@
 
         <div class="col-md-4">
             <div class="card shadow-sm rounded-4">
-                <img src="image/hair.png"
+                <img src="../image/hair.png"
                     class="card-img-top" alt="hairset">
 
                 <div class="card-body">
@@ -507,9 +515,14 @@
                         Help make your hair heavy, brighten and grow faster.
                     </p>
                     <h4 class="text-warning fw-bold mb-3">$21.99</h4>
-                    <a href="#" class="btn btn-warning">
+                    <div class="d-flex gap-2">
+                        <a href="../html/payment.html" class="btn btn-warning">
                         Buy Now
-                    </a>
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -591,7 +604,7 @@
                     ★★★★★
                 </div>
                 <div>
-                    <img src="image/f1.png" class="img-fluid" style="width: 500px;" alt="feedback">
+                    <img src="../image/f1.png" class="img-fluid" style="width: 500px;" alt="feedback">
                 </div>
             </div>
         </div>
@@ -603,7 +616,7 @@
                     ★★★★★
                 </div>
                 <div>
-                    <img src="image/f2.png" class="img-fluid" style="width: 500px;" alt="feedback">
+                    <img src="../image/f2.png" class="img-fluid" style="width: 500px;" alt="feedback">
                 </div>
             </div>
         </div>
@@ -615,7 +628,7 @@
                     ★★★★★
                 </div>
                 <div>
-                    <img src="image/f3.png" class="img-fluid" style="width: 500px;" alt="feedback">
+                    <img src="../image/f3.png" class="img-fluid" style="width: 500px;" alt="feedback">
                 </div>
             </div>
         </div>
@@ -728,16 +741,30 @@
     </div>
 </footer>
 
-<!-- Floating Back Button -->
-<a href="index.html" class="back-btn">
-    <i class="bi bi-arrow-left"></i>
-</a>
-
-<a href="about.html" class="next-btn">
-    <i class="bi bi-arrow-right"></i>
-</a>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Add product to cart and save to localStorage
+    const cartButtons = document.querySelectorAll(".add-cart");
+
+    cartButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const product = button.dataset.product;
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            if(!cart.includes(product)){
+                cart.push(product);
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Added to cart!");
+
+        });
+
+    });
 </script>
 </body>
 </html>

@@ -5,124 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miss Sunflower</title>
 
-    <link rel="icon" type="image/png" href="image/icon.png">
+    <link rel="icon" type="image/png" href="../image/icon.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap icon-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!---icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-color: #FFF4CC;
-        }
-        
-        .next-btn {
-            position: fixed;
-            bottom: 20px;
-
-            width: 45px;
-            height: 45px;
-
-            border-radius: 50%;
-            text-decoration: none; 
-
-            background-color: #F4B41A;
-            color: #000;
-
-            font-size: 18px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            z-index: 9999;
-
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-
-
-        .next-btn {
-            right: 20px;
-        }
-
-        .next-btn:hover {
-            background-color: #000;
-            color: #F4B41A;
-            transform: scale(1.1);
-        }
-
-        .back-btn:active {
-            transform: scale(0.95);
-        }
-        #home img {
-            height: 90vh;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        @media (max-width: 768px) {
-            #home img {
-                height: 40vh;              
-                object-fit: cover;         
-                object-position: 92% center; 
-            }
-        }
-        .product-card img{
-            height: 200px;
-            object-fit: cover;
-        }
-
-        footer a {
-            position: relative;
-            color: #333;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        footer a::after {
-            content: "";
-            position: absolute;
-            width: 0%;
-            height: 2px;
-            left: 0;
-            bottom: -3px;
-            background-color: black;
-            transition: 0.3s;
-        }
-
-        footer a:hover::after {
-            width: 100%;
-        }
-        .navbar{
-            background-color: #FFF8DC;
-        }
-        .card{
-            height: 100%;
-            width: 100%;
-            height: 100%;
-        }
-
-        .card-img-top{
-            height: 285px;
-            object-fit: cover;
-        }
-        .card-body{
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-body .btn{
-            margin-top: auto;
-        }
-        .buy-btn{
-            width: fit-content;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
@@ -143,16 +33,25 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav text-center gap-2">
                 <li class="nav-item">
-                    <a class="nav-link fw-bold text-warning" href="index.html">Home</a>
+                    <a class="nav-link fw-bold text-warning" href="../html/index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-medium" href="product.html">Products</a>
+                    <a class="nav-link fw-medium" href="../html/product.html">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-medium" href="about.html">About</a>
+                    <a class="nav-link fw-medium" href="../html/about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-medium" href="contact.html">Contact</a>
+                    <a class="nav-link fw-medium" href="../html/contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="../html/payment.html">Payment</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-normal" href="../html/sign-in.html">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -166,7 +65,7 @@
 
     <div class="position-relative">
 
-        <img src="image/hbanner.png"
+        <img src="../image/hbanner.png"
              class="img-fluid w-100"
              alt="Miss Sunflower Banner">
 
@@ -185,11 +84,11 @@
                 Natural skincare for healthy and glowing skin
             </p>
 
-            <a href="product.html" class="btn btn-warning me-2">
+            <a href="../html/product.html" class="btn btn-warning me-2">
                 Shop Now
             </a>
 
-            <a href="product.html" class="btn btn-outline-dark">
+            <a href="../html/product.html" class="btn btn-outline-dark">
                 View Product
             </a>
 
@@ -210,11 +109,11 @@
             Natural skincare for healthy and glowing skin
         </p>
 
-        <a href="product.html" class="btn btn-warning me-2">
+        <a href="../html/product.html" class="btn btn-warning me-2">
             Shop Now
         </a>
 
-        <a href="product.html" class="btn btn-outline-dark">
+        <a href="../html/product.html" class="btn btn-outline-dark">
             View Product
         </a>
 
@@ -233,7 +132,7 @@
             Discover gentle skincare designed to bring out your natural glow, every single day.
         </p>
 
-        <a href="product.html" class="btn btn-warning ">
+        <a href="../html/product.html" class="btn btn-warning ">
             Start Your Journey
         </a>
 
@@ -247,48 +146,81 @@
     <div class="row justify-content-center g-4">
         <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
             <div class="card rounded-4 shadow-sm" style="width: 18rem;">
-                <img class="card-img-top" src="image/bodylotion.png" alt="bodylotion">
+                <img class="card-img-top" src="../image/bodylotion.png" alt="bodylotion">
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Body lotion</h5>
                     <p class="card-text">The best body lotion that can help your skin white</p>
                     <h4 class="text-warning fw-bold mb-3">$18.99</h4>
-                    <a href="product.html" class="btn btn-warning btn-sm buy-btn">Buy now</a>
+                    <div class="d-flex gap-2">
+                    
+                        <a href="../html/payment.html" class="btn btn-warning">
+                        Buy Now
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
             <div class="card rounded-4 shadow-sm" style="width: 18rem;">
-                <img class="card-img-top" src="image/bbcream.png" alt="bodylotion">
+                <img class="card-img-top" src="../image/bbcream.png" alt="bodylotion">
                 <div class="card-body">
                     <h5 class="card-title fw-bold">BB Cream</h5>
                     <p class="card-text">Best BB cream to make your face glow and smooth at the same time.</p>
                     <h4 class="text-warning fw-bold mb-3">$7.99</h4>
-                    <a href="product.html" class="btn btn-warning btn-sm buy-btn">Buy now</a>
+                    <div class="d-flex gap-2">
+                    
+                        <a href="../html/payment.html" class="btn btn-warning">
+                        Buy Now
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
             <div class="card rounded-4 shadow-sm" style="width: 18rem;">
-                <img class="card-img-top" src="image/armpit.png" alt="bodylotion">
+                <img class="card-img-top" src="../image/armpit.png" alt="bodylotion">
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Armpit cream</h5>
                     <p class="card-text">Help your armpit white and smooth</p>
                     <br>
                     <h4 class="text-warning fw-bold mb-3">$4.99</h4>
-                    <a href="product.html" class="btn btn-warning btn-sm buy-btn">Buy now</a>
+                    <div class="d-flex gap-2"></div>
+                    <div class="d-flex gap-2">
+                    
+                        <a href="../html/payment.html" class="btn btn-warning">
+                        Buy Now
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
             <div class="card rounded-4 shadow-sm" style="width: 18rem;">
-                <img class="card-img-top" src="image/sunserum.png" alt="bodylotion">
+                <img class="card-img-top" src="../image/sunserum.png" alt="bodylotion">
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Sun Serum</h5>
                     <p class="card-text">Protect your skin from sun burn.</p><br>
                     <h4 class="text-warning fw-bold mb-3">$7.99</h4>
-                    <a href="product.html" class="btn btn-warning btn-sm buy-btn">Buy now</a>
+                    <div class="d-flex gap-2">
+                    
+                        <a href="../html/payment.html" class="btn btn-warning">
+                        Buy Now
+                        </a>
+                        <a href="../html/payment.html" class="btn btn-dark">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -331,7 +263,7 @@
                 </div>
 
                     <div class="col-12 col-md-6 order-1 order-md-2 text-center">
-                        <img src="image/jy.png" class="img-fluid rounded" alt="Je Yeak">
+                        <img src="../image/jy.png" class="img-fluid rounded" alt="Je Yeak">
                 </div>
 
             </div>
@@ -393,7 +325,7 @@
             Discover natural beauty products made for healthy and glowing skin
         </p>
 
-        <a href="product.html" class="btn btn-warning btn-lg px-4">
+        <a href="../html/product.html" class="btn btn-warning btn-lg px-4">
             Shop Now
         </a>
 
@@ -419,10 +351,10 @@
             <div class="col-md-4 mb-4">
                 <h5 class="fw-bold">Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
-                    <li><a href="product.html" class="text-dark text-decoration-none">Products</a></li>
-                    <li><a href="about.html" class="text-dark text-decoration-none">About</a></li>
-                    <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+                    <li><a href="../html/index.html" class="text-dark text-decoration-none">Home</a></li>
+                    <li><a href="../html/product.html" class="text-dark text-decoration-none">Products</a></li>
+                    <li><a href="../html/about.html" class="text-dark text-decoration-none">About</a></li>
+                    <li><a href="../html/contact.html" class="text-dark text-decoration-none">Contact</a></li>
                 </ul>
             </div>
 
@@ -471,12 +403,6 @@
     </div>
 </footer>
 
-<!--Floating button-->
-<div>
-    <a href="product.html" class="next-btn">
-        <i class="bi bi-arrow-right"></i>
-    </a>
-</div>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
