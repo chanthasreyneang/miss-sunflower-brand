@@ -273,27 +273,21 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 
-// ======================================
 // Get cart data from localStorage
-// ======================================
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
-// ======================================
 // Get URL parameters for Buy Now
 // Example:
 // payment.html?product=bb&buy=true
-// ======================================
 const params = new URLSearchParams(window.location.search);
 
 const product = params.get("product");
 const buy = params.get("buy");
 
 
-// ======================================
 // If user clicks Buy Now,
 // show only that product and auto-check it
-// ======================================
 const buyNowProduct =
     (buy === "true" && product)
         ? product
@@ -304,15 +298,11 @@ if (buyNowProduct) {
 }
 
 
-// ======================================
 // Get cart container
-// ======================================
 const cartItems = document.getElementById("cartItems");
 
 
-// ======================================
 // Product database
-// ======================================
 const products = {
 
     body: {
@@ -342,9 +332,7 @@ const products = {
 };
 
 
-// ======================================
 // Display products inside shopping cart
-// ======================================
 cart.forEach(item => {
 
     const product = products[item];
@@ -401,9 +389,7 @@ cart.forEach(item => {
 });
 
 
-// ======================================
 // Calculate total price
-// ======================================
 function updateTotal() {
 
     let total = 0;
@@ -430,11 +416,9 @@ function updateTotal() {
 }
 
 
-// ======================================
 // Update total when:
 // 1. Checkbox is checked/unchecked
 // 2. Quantity is changed
-// ======================================
 document.addEventListener("change", function (e) {
 
     if (
@@ -447,15 +431,11 @@ document.addEventListener("change", function (e) {
 });
 
 
-// ======================================
 // Run total calculation once page loads
-// ======================================
 updateTotal();
 
 
-// ======================================
 // Clear cart after successful checkout
-// ======================================
 document.getElementById("placeOrderBtn")
 .addEventListener("click", () => {
 
