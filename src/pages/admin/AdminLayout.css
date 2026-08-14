@@ -1,0 +1,16 @@
+.admin-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.admin-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+}

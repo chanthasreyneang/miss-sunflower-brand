@@ -1,0 +1,33 @@
+.about-teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.about-teaser-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 320px;
+}
+
+.about-teaser-body {
+  padding: 40px;
+}
+
+.about-teaser-body h2 {
+  margin-bottom: 14px;
+}
+
+.about-teaser-body p {
+  font-size: 1.05rem;
+  color: #55492a;
+}
+
+@media (max-width: 768px) {
+  .about-teaser {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,57 @@
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.about-story-media {
+  padding: 24px;
+}
+
+.about-story-media img {
+  border-radius: var(--radius-lg);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-story-body {
+  padding: 32px 32px 32px 0;
+}
+
+.mission-card {
+  text-align: center;
+  padding: 40px 28px;
+}
+
+.mission-card svg {
+  font-size: 2.2rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 12px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 28px 16px;
+  background: var(--color-cream);
+}
+
+.stat-card h3 {
+  color: var(--color-primary-dark);
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.stat-card p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-story {
+    grid-template-columns: 1fr;
+  }
+  .about-story-body {
+    padding: 0 24px 24px;
+  }
+}

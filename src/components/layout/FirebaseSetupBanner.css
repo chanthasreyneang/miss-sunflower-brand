@@ -1,0 +1,23 @@
+.firebase-banner {
+  background: #fff3cd;
+  color: #6b5416;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  border-bottom: 1px solid #f0dca0;
+}
+
+.firebase-banner svg {
+  flex-shrink: 0;
+  color: #b8860b;
+}
+
+.firebase-banner code {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 1px 6px;
+  border-radius: 4px;
+}

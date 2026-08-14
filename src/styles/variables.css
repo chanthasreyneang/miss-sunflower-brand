@@ -1,0 +1,35 @@
+:root {
+  /* Brand colors — carried over from the original site */
+  --color-primary: #f4b41a;
+  --color-primary-dark: #d89d00;
+  --color-primary-light: #ffe7ad;
+  --color-cream: #fff8dc;
+  --color-cream-light: #fff4cc;
+  --color-gold: #e2c44c;
+
+  /* New neutrals to round out the "white / beige / cream" palette */
+  --color-beige: #f5efe0;
+  --color-white: #ffffff;
+  --color-bg: #fffdf8;
+  --color-ink: #1f1f1f;
+  --color-muted: #6b6b6b;
+  --color-border: #ece3cf;
+  --color-success: #2e7d32;
+  --color-error: #c1442d;
+
+  /* Typography */
+  --font-heading: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  /* Spacing / shape */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 10px rgba(31, 31, 31, 0.06);
+  --shadow-md: 0 8px 24px rgba(31, 31, 31, 0.1);
+  --shadow-lg: 0 16px 40px rgba(31, 31, 31, 0.14);
+  --container-width: 1200px;
+  --nav-height: 76px;
+
+  --transition: 0.25s ease;
+}

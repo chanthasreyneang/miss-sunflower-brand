@@ -1,0 +1,61 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Public catalog data — anyone can read, only admins can write.
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Orders — a signed-in user can create their own order and read their
+    // own orders; admins can read/update all orders (e.g. change status).
+    match /orders/{orderId} {
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow read: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // User profiles — a user manages their own doc (role is bootstrapped by
+    // hand in the console for the first admin, see SETUP.md).
+    match /users/{userId} {
+      allow read: if isSignedIn() && (request.auth.uid == userId || isAdmin());
+      allow create: if isSignedIn() && request.auth.uid == userId;
+      allow update: if isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Contact form / product feedback / newsletter — public can submit,
+    // only admins can read them back.
+    match /contactMessages/{id} {
+      allow create: if true;
+      allow read: if isAdmin();
+    }
+
+    match /feedback/{id} {
+      allow create: if true;
+      allow read: if isAdmin();
+    }
+
+    match /newsletterSignups/{id} {
+      allow create: if true;
+      allow read: if isAdmin();
+    }
+  }
+}
