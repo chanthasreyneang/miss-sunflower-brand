@@ -25,7 +25,7 @@ import OrdersAdmin from "./pages/admin/OrdersAdmin";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <AuthProvider>
         <CatalogProvider>
           <CartProvider>
