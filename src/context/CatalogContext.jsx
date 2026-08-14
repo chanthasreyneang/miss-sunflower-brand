@@ -13,6 +13,14 @@ export function CatalogProvider({ children }) {
 
   useEffect(() => {
     if (!isFirebaseConfigured) {
+      // Loud on purpose: this exact state (env vars missing at build time)
+      // is what silently ships as "no products/categories" with no other
+      // signal. If you're reading this in devtools on a deployed site, the
+      // build didn't have VITE_FIREBASE_* set — see SETUP.md.
+      console.warn(
+        "[Firebase] Not configured — VITE_FIREBASE_* env vars were empty at build time. " +
+          "Products/categories/auth will stay empty until they're set and the site is rebuilt."
+      );
       setLoading(false);
       setError("firebase-not-configured");
       return undefined;
@@ -31,6 +39,7 @@ export function CatalogProvider({ children }) {
         checkDone();
       },
       (err) => {
+        console.error("[Firestore] products subscription failed:", err.code, err.message);
         setError(err.message);
         productsLoaded = true;
         checkDone();
@@ -44,6 +53,7 @@ export function CatalogProvider({ children }) {
         checkDone();
       },
       (err) => {
+        console.error("[Firestore] categories subscription failed:", err.code, err.message);
         setError(err.message);
         categoriesLoaded = true;
         checkDone();
