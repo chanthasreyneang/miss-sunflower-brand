@@ -12,5 +12,12 @@
 @media (max-width: 900px) {
   .admin-layout {
     flex-direction: column;
+    /* In row mode, align-items:flex-start (above) keeps the sidebar from
+       stretching to the content pane's height. In column mode that same
+       flex-start instead lets .admin-content size to its own content
+       width (the table) rather than the container's width, so it never
+       gets clipped by its own overflow-x:auto. Stretch only applies to
+       this axis concern in column mode, not the row-mode one above. */
+    align-items: stretch;
   }
 }
