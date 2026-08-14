@@ -33,12 +33,14 @@
 @media (max-width: 900px) {
   .admin-sidebar {
     width: 100%;
+    min-width: 0;
   }
 
   .admin-sidebar nav {
     position: static;
     flex-direction: row;
     overflow-x: auto;
+    min-width: 0;
     padding-bottom: 6px;
   }
 
